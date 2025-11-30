@@ -3,12 +3,12 @@
 
 using namespace std;
 
-void createlistMahasiswa(listMahasiswa &L){
+void createlistMahasiswa_103012400229(listMahasiswa &L){
     L.first = nullptr;
     L.last = nullptr;
 }
 
-bool isEmptyMahasiswa(listMahasiswa L){
+bool isEmptyMahasiswa_103012400229(listMahasiswa L){
     if (L.first == nullptr){
         return true;
     }else{
@@ -16,7 +16,7 @@ bool isEmptyMahasiswa(listMahasiswa L){
     }
 }
 
-bool isEmptyMataKuliah(adrMahasiswa p){
+bool isEmptyMataKuliah_103012400229(adrMahasiswa p){
     if(p->firstMK == nullptr){
         return true;
     }else{
@@ -24,7 +24,7 @@ bool isEmptyMataKuliah(adrMahasiswa p){
     }
 }
 
-adrMahasiswa createElemenMahasiswa (string nama, string nim){
+adrMahasiswa createElemenMahasiswa_103012400229(string nama, string nim){
     adrMahasiswa p = new elemenMahasiswa;
 
     p->info.nama = nama;
@@ -36,7 +36,7 @@ adrMahasiswa createElemenMahasiswa (string nama, string nim){
     return p;
 }
 
-adrMataKuliah createElemenMataKuliah(string nama, string kode){
+adrMataKuliah createElemenMataKuliah_103012400229(string nama, string kode){
     adrMataKuliah q = new elemenMataKuliah;
 
     q->info.nama = nama;
@@ -47,7 +47,7 @@ adrMataKuliah createElemenMataKuliah(string nama, string kode){
     return q;
 }
 
-void addMahasiswa(listMahasiswa &L, adrMahasiswa p){
+void addMahasiswa_103012400229(listMahasiswa &L, adrMahasiswa p){
     if (L.first == nullptr){
         L.first = p;
         L.last = p;
@@ -62,7 +62,7 @@ void addMahasiswa(listMahasiswa &L, adrMahasiswa p){
     }
 }
 
-void addMataKuliah(adrMahasiswa &p, adrMataKuliah q){
+void addMataKuliah_103012400229(adrMahasiswa &p, adrMataKuliah q){
     if (p->firstMK == nullptr){
         p->firstMK = q;
         q->next = nullptr;
@@ -78,7 +78,7 @@ void addMataKuliah(adrMahasiswa &p, adrMataKuliah q){
     }
 }
 
-adrMahasiswa searchMahasiswa(listMahasiswa L, string nim){
+adrMahasiswa searchMahasiswa_103012400229(listMahasiswa L, string nim){
     if(L.first == nullptr){
         return nullptr;
     }else{
@@ -93,7 +93,7 @@ adrMahasiswa searchMahasiswa(listMahasiswa L, string nim){
     return nullptr;
 }
 
-void displaylist(listMahasiswa L){
+void displaylist_103012400229(listMahasiswa L){
     adrMahasiswa jalan = L.first;
     while(jalan != nullptr){
         cout << "Mahasiswa : " << jalan->info.nama << " (" << jalan->info.nim << ")" << endl;

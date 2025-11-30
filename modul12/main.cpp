@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     listMahasiswa L;
-    createlistMahasiswa(L);
+    createlistMahasiswa_103012400229(L);
     string namaMahasiswa, nim, matkul, kode;
     int i, j;
 
@@ -16,8 +16,8 @@ int main()
         cin >> namaMahasiswa;
         cout << "Masukkan nim mahasiswa: ";
         cin >> nim;
-        adrMahasiswa p = createElemenMahasiswa(namaMahasiswa, nim);
-        addMahasiswa(L, p);
+        adrMahasiswa p = createElemenMahasiswa_103012400229(namaMahasiswa, nim);
+        addMahasiswa_103012400229(L, p);
         cout << endl;
     }
 
@@ -29,18 +29,17 @@ int main()
         cin >> kode;
         cout << "Masukkan nim mahasiswa yang ingin diinputkan: ";
         cin >> nim;
-        adrMataKuliah q = createElemenMataKuliah(matkul, kode);
+        adrMataKuliah q = createElemenMataKuliah_103012400229(matkul, kode);
 
-        adrMahasiswa simpan = searchMahasiswa(L, nim);
+        adrMahasiswa simpan = searchMahasiswa_103012400229(L, nim);
         if (simpan != nullptr){
-            addMataKuliah(simpan, q);
+            addMataKuliah_103012400229(simpan, q);
         }
         cout << endl;
     }
 
     cout << "[INPUT MAHASISWA]" << endl;
-    displaylist(L);
+    displaylist_103012400229(L);
 
-    cout << "Hello world!" << endl;
     return 0;
 }
